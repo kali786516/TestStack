@@ -9,8 +9,8 @@ Resources:
         - Stack ${StackTagName} Environment ${EnvironmentTagName} Function ${ResourceName}
         - ResourceName: WriteToTable
       CodeUri: src/WriteToTable
-      Handler: index.handler
-      Runtime: nodejs10.x
+      Handler: Handler::handler
+      Runtime: java8
       MemorySize: 3008
       Timeout: 30
       Tracing: Active
@@ -30,8 +30,8 @@ Resources:
         - Stack ${StackTagName} Environment ${EnvironmentTagName} Function ${ResourceName}
         - ResourceName: SendDailyEmail
       CodeUri: src/SendDailyEmail
-      Handler: handler.handler
-      Runtime: python3.7
+      Handler: Handler::handler
+      Runtime: java8
       MemorySize: 3008
       Timeout: 30
       Tracing: Active
